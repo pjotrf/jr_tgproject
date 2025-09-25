@@ -2,37 +2,16 @@ from aiogram import Router, F
 from aiogram.types import CallbackQuery, Message
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
+
+from keyboards.inline.main_menu import inline_main_menu
+from keyboards.reply.main_menu import reply_menu
 
 router = Router()
-
-def inline_main_menu() -> InlineKeyboardMarkup:
-    return InlineKeyboardMarkup(inline_keyboard=[
-        [
-            InlineKeyboardButton(text="🎲 Факт", callback_data="fact_random"),
-            InlineKeyboardButton(text="💬 GPT", callback_data="gpt_open"),
-        ],
-        [
-            InlineKeyboardButton(text="🧑‍🎓 Личность", callback_data="talk_open"),
-            InlineKeyboardButton(text="📝 Квиз", callback_data="quiz_open"),
-        ],
-        [
-            InlineKeyboardButton(text="🌐 Переводчик", callback_data="tr_open"),
-            InlineKeyboardButton(text="🎬 Рекомендации", callback_data="recs_open"),
-        ],
-    ])
-
-
-def reply_menu() -> ReplyKeyboardMarkup:
-    return ReplyKeyboardMarkup(
-        keyboard=[[KeyboardButton(text="🏠 Меню")]],
-        resize_keyboard=True
-    )
 
 WELCOME_TEXT = (
     "👋 Привет! Я твой помощник ChatGPT 🤖\n\n"
     "Вот что я умею:\n"
-    "• 🎲 Случайный факт — пришлю картинку и любопытное знание\n"
+    "• 🎲 Случайный факт — расскажу интересное знание\n"
     "• 💬 GPT — задай любой вопрос ИИ\n"
     "• 🧑‍🎓 Личность — общение в стиле Эйнштейна, Пушкина или Джобса\n"
     "• 📝 Квиз — викторина с вариантами ответов\n"

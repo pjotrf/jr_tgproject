@@ -155,3 +155,91 @@
 2025-09-25 15:11:44,169 [INFO] aiogram.event: Update id=524975029 is handled. Duration 47 ms by bot id=8261433265
 2025-09-25 15:12:19,307 [INFO] aiogram.dispatcher: Polling stopped
 2025-09-25 15:12:19,558 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 15:42:51,280 [INFO] bot: 🚀 Bot starting...
+2025-09-25 15:42:51,280 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 15:42:51,390 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 15:42:56,056 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: fact_random 🔄 Ещё факт
+2025-09-25 15:42:58,614 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 15:42:58,864 [INFO] aiogram.event: Update id=524975046 is handled. Duration 2811 ms by bot id=8261433265
+2025-09-25 15:43:04,230 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: start 🏠 В меню
+2025-09-25 15:43:04,290 [INFO] aiogram.event: Update id=524975047 is handled. Duration 61 ms by bot id=8261433265
+2025-09-25 15:43:14,543 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 15:43:14,809 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 17:49:32,226 [INFO] bot: 🚀 Bot starting...
+2025-09-25 17:49:32,226 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 17:49:32,424 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 17:49:54,528 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 17:49:54,764 [INFO] aiogram.event: Update id=524975081 is handled. Duration 233 ms by bot id=8261433265
+2025-09-25 17:49:57,201 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: fact_random 🔄 Ещё факт
+2025-09-25 17:50:02,045 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 17:50:02,339 [INFO] aiogram.event: Update id=524975082 is handled. Duration 5140 ms by bot id=8261433265
+2025-09-25 17:50:04,090 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: start 🏠 В меню
+2025-09-25 17:50:04,274 [INFO] aiogram.event: Update id=524975083 is handled. Duration 187 ms by bot id=8261433265
+2025-09-25 17:50:06,039 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: gpt_open 💬 GPT
+2025-09-25 17:50:06,163 [INFO] aiogram.event: Update id=524975084 is handled. Duration 125 ms by bot id=8261433265
+2025-09-25 17:50:07,088 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=GptState:waiting | cb: start 🏠 В меню
+2025-09-25 17:50:07,244 [INFO] aiogram.event: Update id=524975085 is handled. Duration 155 ms by bot id=8261433265
+2025-09-25 17:50:08,141 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: talk_open
+2025-09-25 17:50:08,232 [INFO] aiogram.event: Update id=524975086 is handled. Duration 78 ms by bot id=8261433265
+2025-09-25 17:50:10,507 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: talk_set_einstein 🧑‍🔬 Эйнштейн
+2025-09-25 17:50:10,621 [INFO] aiogram.event: Update id=524975087 is handled. Duration 108 ms by bot id=8261433265
+2025-09-25 17:50:11,546 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=PersonaState:chatting | cb: start 🏠 В меню
+2025-09-25 17:50:11,605 [INFO] aiogram.event: Update id=524975088 is handled. Duration 63 ms by bot id=8261433265
+2025-09-25 17:50:13,971 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_open 📝 Квиз
+2025-09-25 17:50:14,065 [INFO] aiogram.event: Update id=524975089 is handled. Duration 93 ms by bot id=8261433265
+2025-09-25 17:50:14,844 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_Спорт 🏟 Спорт
+2025-09-25 17:50:17,300 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 17:50:17,393 [INFO] aiogram.event: Update id=524975090 is handled. Duration 2546 ms by bot id=8261433265
+2025-09-25 17:50:20,367 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | msg: 🏠 Меню
+2025-09-25 17:50:20,440 [INFO] aiogram.event: Update id=524975091 is handled. Duration 79 ms by bot id=8261433265
+2025-09-25 17:50:21,715 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: recs_open 🎬 Рекомендации
+2025-09-25 17:50:21,796 [INFO] aiogram.event: Update id=524975092 is handled. Duration 77 ms by bot id=8261433265
+2025-09-25 17:50:24,813 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: recs_cat_музыка 🎧 Музыка
+2025-09-25 17:50:24,955 [INFO] aiogram.event: Update id=524975093 is handled. Duration 140 ms by bot id=8261433265
+2025-09-25 17:50:29,751 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=RecsState:waiting_genre | msg: Hjr
+2025-09-25 17:50:36,834 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 17:50:36,943 [INFO] aiogram.event: Update id=524975094 is handled. Duration 7188 ms by bot id=8261433265
+2025-09-25 17:50:46,696 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=RecsState:waiting_genre | cb: start 🏠 В меню
+2025-09-25 17:50:46,767 [INFO] aiogram.event: Update id=524975095 is handled. Duration 77 ms by bot id=8261433265
+2025-09-25 17:50:56,264 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 17:50:56,517 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 18:03:00,662 [INFO] bot: 🚀 Bot starting...
+2025-09-25 18:03:00,662 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 18:03:00,786 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 18:03:04,872 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 18:03:04,872 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8261433265)
+2025-09-25 18:03:09,135 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 18:03:09,389 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 18:03:15,916 [INFO] bot: 🚀 Bot starting...
+2025-09-25 18:03:15,916 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 18:03:16,086 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 18:08:22,951 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 18:08:23,370 [INFO] aiogram.event: Update id=524975096 is handled. Duration 420 ms by bot id=8261433265
+2025-09-25 18:08:37,318 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: tr_open 🌐 Переводчик
+2025-09-25 18:08:37,407 [INFO] aiogram.event: Update id=524975097 is handled. Duration 92 ms by bot id=8261433265
+2025-09-25 18:08:42,369 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: tr_set_de 🇩🇪 Перевод на немецкий
+2025-09-25 18:08:42,430 [INFO] aiogram.event: Update id=524975098 is handled. Duration 63 ms by bot id=8261433265
+2025-09-25 18:08:49,009 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=TranslatorState:waiting_text | msg: 🏠 Меню
+2025-09-25 18:08:49,066 [INFO] aiogram.event: Update id=524975099 is handled. Duration 63 ms by bot id=8261433265
+2025-09-25 18:08:51,150 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_open 📝 Квиз
+2025-09-25 18:08:51,240 [INFO] aiogram.event: Update id=524975100 is handled. Duration 92 ms by bot id=8261433265
+2025-09-25 18:08:53,256 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_Наука 🔬 Наука
+2025-09-25 18:08:56,097 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 18:08:56,320 [INFO] aiogram.event: Update id=524975101 is handled. Duration 3063 ms by bot id=8261433265
+2025-09-25 18:09:00,211 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=QuizState:answering | msg: 🏠 Меню
+2025-09-25 18:09:00,412 [INFO] aiogram.event: Update id=524975102 is handled. Duration 202 ms by bot id=8261433265
+2025-09-25 18:09:01,938 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: fact_random 🔄 Ещё факт
+2025-09-25 18:09:09,007 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 18:09:09,072 [INFO] aiogram.event: Update id=524975103 is handled. Duration 7125 ms by bot id=8261433265
+2025-09-25 18:09:11,649 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: gpt_open 💬 GPT
+2025-09-25 18:09:11,737 [INFO] aiogram.event: Update id=524975104 is handled. Duration 92 ms by bot id=8261433265
+2025-09-25 18:09:13,719 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=GptState:waiting | cb: talk_open
+2025-09-25 18:09:13,820 [INFO] aiogram.event: Update id=524975105 is handled. Duration 93 ms by bot id=8261433265
+2025-09-25 18:09:15,413 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=GptState:waiting | cb: talk_set_einstein 🧑‍🔬 Эйнштейн
+2025-09-25 18:09:15,517 [INFO] aiogram.event: Update id=524975106 is handled. Duration 109 ms by bot id=8261433265
+2025-09-25 18:09:22,784 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=PersonaState:chatting | cb: start 🏠 В меню
+2025-09-25 18:09:22,910 [INFO] aiogram.event: Update id=524975107 is handled. Duration 125 ms by bot id=8261433265
+2025-09-25 18:14:33,174 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 18:14:33,337 [INFO] aiogram.event: Update id=524975108 is handled. Duration 156 ms by bot id=8261433265
+2025-09-25 18:17:29,716 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 18:17:29,971 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
