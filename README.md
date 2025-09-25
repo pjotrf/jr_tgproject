@@ -60,15 +60,34 @@ docker compose down
 
 ```
 .
-├── bot.py                # Точка входа
-├── core/                 # Диспетчер, конфиг
-├── handlers/             # Обработчики команд
-├── services/             # Работа с OpenAI, утилиты
-├── Dockerfile            # Сборка образа
-├── docker-compose.yml    # Сервис для запуска
-├── requirements.txt      # Python-зависимости
-├── healthcheck.py        # Скрипт для проверки бота
-└── README.md             # Документация
+├── bot.py # точка входа
+├── config.py # конфигурация (токены)
+├── core/
+│ ├── dispatcher.py # инициализация бота и логирование
+│ └── logger.py # настройка логгера
+├── handlers/ # обработчики команд и callback
+│ ├── start.py
+│ ├── random_fact.py
+│ ├── gpt.py
+│ ├── talk.py
+│ ├── quiz.py
+│ ├── translator.py
+│ └── recs.py
+├── keyboards/ # клавиатуры
+│ ├── inline/
+│ │ ├── main_menu.py
+│ │ ├── talk.py
+│ │ ├── quiz.py
+│ │ ├── translator.py
+│ │ └── recs.py
+│ └── reply/
+│ └── main_menu.py
+├── services/
+│ └── chatgpt.py # обёртка для работы с OpenAI
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+└── README.md
 ```
 
 ---
