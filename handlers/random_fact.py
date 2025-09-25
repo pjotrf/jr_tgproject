@@ -1,16 +1,19 @@
-from aiogram import Router, types, F
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram import Router, F
+from aiogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from services.chatgpt import ask_gpt
 
 router = Router()
-FACT_PROMPT = "Расскажи интересный научный факт простыми словами."
 
-@router.callback_query(F.data == "random")
-async def random_fact_handler(callback: types.CallbackQuery):
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🎲 Хочу ещё", callback_data="random")],
-        [InlineKeyboardButton(text="🏠 В меню", callback_data="start")]
+def fact_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="🔄 Ещё факт", callback_data="fact_random"),
+            InlineKeyboardButton(text="🏠 В меню", callback_data="start"),
+        ]
     ])
-    answer = await ask_gpt(FACT_PROMPT)
-    await callback.message.answer(f"✨ Интересный факт:\n\n{answer}", reply_markup=keyboard)
-    await callback.answer()
+
+@router.callback_query(F.data == "fact_random")
+async def fact_random(call: CallbackQuery):
+    text = await ask_gpt("Расскажи один краткий редкий научный факт простыми словами.")
+    if call.message:
+        await call.message.edit_text(f"✨ {text}", reply_markup=fact_kb())

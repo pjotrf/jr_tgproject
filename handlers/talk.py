@@ -1,7 +1,7 @@
-from aiogram import Router, types, F
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from aiogram.fsm.context import FSMContext
+from aiogram import Router, F
+from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.fsm.state import StatesGroup, State
+from aiogram.fsm.context import FSMContext
 from services.chatgpt import ask_gpt
 
 router = Router()
@@ -10,58 +10,50 @@ class PersonaState(StatesGroup):
     chatting = State()
 
 PERSONAS = {
-    "einstein": "Представь, что ты Альберт Эйнштейн.",
-    "pushkin": "Ты Александр Пушкин, поэт.",
-    "jobs": "Ты Стив Джобс, отвечай жёстко и вдохновляюще."
+    "einstein": "Представь, что ты Альберт Эйнштейн. Отвечай как он.",
+    "pushkin": "Ты Александр Пушкин. Отвечай поэтично и изящно.",
+    "jobs": "Ты Стив Джобс. Отвечай резко, ёмко и вдохновляюще.",
 }
 
-def persona_menu_kb() -> InlineKeyboardMarkup:
+def talk_menu_kb() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🧑‍🔬 Эйнштейн", callback_data="persona_einstein")],
-        [InlineKeyboardButton(text="✒ Пушкин", callback_data="persona_pushkin")],
-        [InlineKeyboardButton(text="🍏 Стив Джобс", callback_data="persona_jobs")],
-        [InlineKeyboardButton(text="🏠 В меню", callback_data="start")],
+        [
+            InlineKeyboardButton(text="🧑‍🔬 Эйнштейн", callback_data="talk_set_einstein"),
+            InlineKeyboardButton(text="✒ Пушкин", callback_data="talk_set_pushkin"),
+        ],
+        [
+            InlineKeyboardButton(text="🍏 Стив Джобс", callback_data="talk_set_jobs"),
+            InlineKeyboardButton(text="🏠 В меню", callback_data="start"),
+        ],
     ])
 
-@router.callback_query(F.data == "talk")
-async def talk_menu(callback: types.CallbackQuery):
-    await callback.message.answer("👤 С кем поболтаем?", reply_markup=persona_menu_kb())
-    await callback.answer()
-
-@router.callback_query(F.data.startswith("persona_"))
-async def set_persona(callback: types.CallbackQuery, state: FSMContext):
-    persona_key = callback.data.split("_", 1)[1]
-    system_prompt = PERSONAS.get(persona_key)
-    if not system_prompt:
-        await callback.message.answer("⚠ Неизвестная персона. Выберите из меню.")
-        await callback.answer()
-        return
-
-    await state.update_data(persona=system_prompt)
-    await state.set_state(PersonaState.chatting)
-
-    kb = InlineKeyboardMarkup(inline_keyboard=[
+def talk_in_chat_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="🏠 В меню", callback_data="start")]
     ])
-    await callback.message.answer(
-        f"✅ Вы выбрали: {persona_key.capitalize()}\n✍ Напишите сообщение — персона ответит в своём стиле.",
-        reply_markup=kb
-    )
-    await callback.answer()
+
+@router.callback_query(F.data == "talk_open")
+async def talk_open(call: CallbackQuery):
+    if call.message:
+        await call.message.edit_text("👤 Выбери личность:", reply_markup=talk_menu_kb())
+
+@router.callback_query(F.data.startswith("talk_set_"))
+async def talk_set(call: CallbackQuery, state: FSMContext):
+    key = call.data.split("_", 2)[-1]
+    persona = PERSONAS.get(key)
+    if not persona:
+        if call.message:
+            await call.message.edit_text("⚠ Неизвестная персона. Выбери из списка.", reply_markup=talk_menu_kb())
+        return
+    await state.update_data(persona=persona)
+    await state.set_state(PersonaState.chatting)
+    if call.message:
+        await call.message.edit_text(f"✅ Персона выбрана. Напиши сообщение — отвечу в стиле персонажа.", reply_markup=talk_in_chat_kb())
 
 @router.message(PersonaState.chatting)
-async def persona_chat(message: types.Message, state: FSMContext):
+async def talk_chat(msg: Message, state: FSMContext):
     data = await state.get_data()
-    persona = data.get("persona")
-    if not persona:
-        await state.clear()
-        await message.answer("⚠ Персона не выбрана. Нажмите «🧑‍🎓 Диалог с личностью» и выберите персону.")
-        return
-
-    prompt = f"{persona}\n\nПользователь: {message.text}"
-    answer = await ask_gpt(prompt)
-
-    kb = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🏠 В меню", callback_data="start")]
-    ])
-    await message.answer(f"👤 {answer}", reply_markup=kb)
+    persona = data.get("persona", "")
+    prompt = f"{persona}\n\nПользователь: {msg.text}"
+    ans = await ask_gpt(prompt)
+    await msg.answer(f"👤 {ans}", reply_markup=talk_in_chat_kb())

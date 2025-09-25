@@ -1,48 +1,61 @@
-from aiogram import Router, types, F
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from aiogram.fsm.context import FSMContext
+from aiogram import Router, F
+from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.fsm.state import StatesGroup, State
+from aiogram.fsm.context import FSMContext
 from services.chatgpt import ask_gpt
 
 router = Router()
 
-class TranslatorState(StatesGroup):
+class TrState(StatesGroup):
     translating = State()
 
-LANGUAGES = {
+LANGS = {
     "en": "английский",
     "de": "немецкий",
     "fr": "французский",
-    "es": "испанский"
+    "es": "испанский",
 }
 
-@router.callback_query(F.data == "translator")
-async def translator_menu(callback: types.CallbackQuery):
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=name, callback_data=f"lang_{code}") for code, name in LANGUAGES.items()]
-    ])
-    await callback.message.answer("🌐 Выберите язык перевода:", reply_markup=keyboard)
-    await callback.answer()
+def tr_menu_kb() -> InlineKeyboardMarkup:
+    row1 = [
+        InlineKeyboardButton(text="🇬🇧 EN", callback_data="tr_set_en"),
+        InlineKeyboardButton(text="🇩🇪 DE", callback_data="tr_set_de"),
+    ]
+    row2 = [
+        InlineKeyboardButton(text="🇫🇷 FR", callback_data="tr_set_fr"),
+        InlineKeyboardButton(text="🇪🇸 ES", callback_data="tr_set_es"),
+    ]
+    row3 = [InlineKeyboardButton(text="🏠 В меню", callback_data="start")]
+    return InlineKeyboardMarkup(inline_keyboard=[row1, row2, row3])
 
-@router.callback_query(F.data.startswith("lang_"))
-async def set_language(callback: types.CallbackQuery, state: FSMContext):
-    code = callback.data.split("_", 1)[1]
-    lang = LANGUAGES.get(code, "английский")
+def tr_in_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="🌍 Сменить язык", callback_data="tr_open")],
+        [InlineKeyboardButton(text="🏠 В меню", callback_data="start")],
+    ])
+
+@router.callback_query(F.data == "tr_open")
+async def tr_open(call: CallbackQuery, state: FSMContext):
+    await state.clear()
+    if call.message:
+        await call.message.edit_text("🌐 Выбери язык перевода:", reply_markup=tr_menu_kb())
+
+@router.callback_query(F.data.startswith("tr_set_"))
+async def tr_set_lang(call: CallbackQuery, state: FSMContext):
+    code = call.data.split("_", 2)[-1]
+    lang = LANGS.get(code, "английский")
     await state.update_data(lang=lang)
-    await state.set_state(TranslatorState.translating)
-    await callback.message.answer(f"✅ Язык перевода: {lang}. Введите текст для перевода.")
-    await callback.answer()
+    await state.set_state(TrState.translating)
+    if call.message:
+        await call.message.edit_text(f"✅ Язык: {lang}\n✍ Отправь текст для перевода.", reply_markup=tr_in_kb())
 
-@router.message(TranslatorState.translating)
-async def translate_message(message: types.Message, state: FSMContext):
+@router.message(TrState.translating)
+async def tr_translate(msg: Message, state: FSMContext):
     data = await state.get_data()
-    lang = data["lang"]
-    text = message.text
-    prompt = f"Переведи на {lang}: {text}"
-    result = await ask_gpt(prompt)
-
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🌍 Сменить язык", callback_data="translator")],
-        [InlineKeyboardButton(text="🏠 В меню", callback_data="start")]
-    ])
-    await message.answer(f"🔤 Перевод:\n{result}", reply_markup=keyboard)
+    lang = data.get("lang", "английский")
+    src = (msg.text or "").strip()
+    if not src:
+        await msg.answer("Пусто 🤔 Введи текст для перевода.", reply_markup=tr_in_kb())
+        return
+    ans = await ask_gpt(f"Переведи на {lang}: {src}")
+    await msg.answer(f"🔤 {ans}", reply_markup=tr_in_kb())
