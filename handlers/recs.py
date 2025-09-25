@@ -31,7 +31,7 @@ async def recs_genre(msg: Message, state: FSMContext):
     data = await state.get_data()
     cat = data.get("cat", "фильмы")
     await state.set_state(RecsState.recommending)
-    recs = await ask_gpt(f"Дай рекомендации ({cat}) в жанре '{msg.text}'")
+    recs = await ask_gpt(f"Дай рекомендации ({cat}) в жанре '{msg.text}'", temperature=1.0)
     await msg.answer(f"🎯 Рекомендации:\n{recs}", reply_markup=recs_result_kb())
 
 @router.callback_query(F.data.in_(["recs_dislike", "recs_more"]))
@@ -39,5 +39,5 @@ async def recs_more_btn(call: CallbackQuery, state: FSMContext):
     data = await state.get_data()
     cat = data.get("cat", "фильмы")
     if call.message:
-        recs = await ask_gpt(f"Дай ещё рекомендации ({cat}), учитывая, что предыдущие не понравились")
+        recs = await ask_gpt(f"Дай ещё рекомендации ({cat}), учитывая, что предыдущие не понравились", temperature=1.0)
         await call.message.edit_text(f"🎯 Новые рекомендации:\n{recs}", reply_markup=recs_result_kb())

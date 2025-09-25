@@ -29,5 +29,5 @@ async def tr_set(call: CallbackQuery, state: FSMContext):
 async def tr_translate(msg: Message, state: FSMContext):
     data = await state.get_data()
     lang = data.get("lang", "en")
-    translated = await ask_gpt(f"Переведи на {lang}: {msg.text}")
+    translated = await ask_gpt(f"Переведи на {lang}: {msg.text}", temperature=0.0)
     await msg.answer(f"🌐 Перевод: {translated}", reply_markup=translator_langs_kb())

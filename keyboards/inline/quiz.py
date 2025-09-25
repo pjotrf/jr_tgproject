@@ -23,3 +23,10 @@ def quiz_answers_kb() -> InlineKeyboardMarkup:
             InlineKeyboardButton(text="D", callback_data="quiz_ans_D"),
         ],
     ])
+
+def quiz_result_kb(topic: str) -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="🔄 Ещё вопрос", callback_data=f"quiz_topic_{topic}")],
+        [InlineKeyboardButton(text="📚 Сменить тему", callback_data="quiz_open")],
+        [InlineKeyboardButton(text="🏠 В меню", callback_data="start")],
+    ])

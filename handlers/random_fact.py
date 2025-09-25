@@ -10,7 +10,7 @@ FACT_PROMPT = "Расскажи один интересный случайный
 
 @router.callback_query(F.data == "fact_random")
 async def fact_random(call: CallbackQuery):
-    response = await ask_gpt(FACT_PROMPT)
+    response = await ask_gpt(FACT_PROMPT, temperature=1.0)
     if call.message:
         await call.message.edit_text(
             f"🎲 Факт:\n{response}",
@@ -19,5 +19,5 @@ async def fact_random(call: CallbackQuery):
 
 @router.message(F.text == "/random")
 async def fact_random_cmd(msg: Message):
-    response = await ask_gpt(FACT_PROMPT)
+    response = await ask_gpt(FACT_PROMPT, temperature=1.0)
     await msg.answer(f"🎲 Факт:\n{response}", reply_markup=inline_main_menu())

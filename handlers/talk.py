@@ -43,5 +43,5 @@ async def talk_chat(msg: Message, state: FSMContext):
     data = await state.get_data()
     persona = data.get("persona", "")
     prompt = f"{persona}\n\nПользователь: {msg.text}"
-    ans = await ask_gpt(prompt)
+    ans = await ask_gpt(prompt, temperature=1.0)
     await msg.answer(f"👤 {ans}", reply_markup=talk_chat_kb())

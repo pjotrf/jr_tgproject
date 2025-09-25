@@ -243,3 +243,476 @@
 2025-09-25 18:14:33,337 [INFO] aiogram.event: Update id=524975108 is handled. Duration 156 ms by bot id=8261433265
 2025-09-25 18:17:29,716 [INFO] aiogram.dispatcher: Polling stopped
 2025-09-25 18:17:29,971 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 19:55:14,514 [INFO] bot: 🚀 Bot starting...
+2025-09-25 19:55:14,514 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 19:55:14,634 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 19:55:23,592 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 19:55:23,752 [INFO] aiogram.event: Update id=524975133 is handled. Duration 171 ms by bot id=8261433265
+2025-09-25 19:55:28,898 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_open 📝 Квиз
+2025-09-25 19:55:29,012 [INFO] aiogram.event: Update id=524975134 is handled. Duration 108 ms by bot id=8261433265
+2025-09-25 19:55:30,598 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_История 📚 История
+2025-09-25 19:55:33,773 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 19:55:34,060 [INFO] aiogram.event: Update id=524975135 is handled. Duration 3452 ms by bot id=8261433265
+2025-09-25 19:55:35,773 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:answering | cb: quiz_ans_A Вариант A
+2025-09-25 19:55:36,881 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 19:55:37,021 [INFO] aiogram.event: Update id=524975136 is handled. Duration 1250 ms by bot id=8261433265
+2025-09-25 19:57:45,454 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 19:57:45,712 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 19:58:22,691 [INFO] bot: 🚀 Bot starting...
+2025-09-25 19:58:22,692 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 19:58:22,810 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 19:58:27,284 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 19:58:27,427 [INFO] aiogram.event: Update id=524975137 is handled. Duration 141 ms by bot id=8261433265
+2025-09-25 19:58:28,732 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_open 📝 Квиз
+2025-09-25 19:58:28,792 [INFO] aiogram.event: Update id=524975138 is handled. Duration 61 ms by bot id=8261433265
+2025-09-25 19:58:30,622 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_История 📚 История
+2025-09-25 19:58:30,624 [INFO] aiogram.event: Update id=524975139 is not handled. Duration 0 ms by bot id=8261433265
+2025-09-25 19:58:30,624 [ERROR] aiogram.event: Cause exception while process update id=524975139 by bot id=8261433265
+KeyError: '\n  "question"'
+Traceback (most recent call last):
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\core\dispatcher.py", line 55, in log_callbacks
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\handlers\quiz.py", line 78, in quiz_question
+    qdata = await _generate_mc_question(topic)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\handlers\quiz.py", line 35, in _generate_mc_question
+    ).format(topic=topic)
+      ^^^^^^^^^^^^^^^^^^^
+KeyError: '\n  "question"'
+2025-09-25 20:01:08,394 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 20:01:08,652 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 20:01:17,848 [INFO] bot: 🚀 Bot starting...
+2025-09-25 20:01:17,848 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 20:01:18,018 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 20:01:24,054 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 20:01:24,194 [INFO] aiogram.event: Update id=524975140 is handled. Duration 140 ms by bot id=8261433265
+2025-09-25 20:01:29,228 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_open 📝 Квиз
+2025-09-25 20:01:29,312 [INFO] aiogram.event: Update id=524975141 is handled. Duration 78 ms by bot id=8261433265
+2025-09-25 20:01:31,201 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_История 📚 История
+2025-09-25 20:01:34,034 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:01:34,230 [INFO] aiogram.event: Update id=524975142 is handled. Duration 3030 ms by bot id=8261433265
+2025-09-25 20:01:39,315 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:01:39,441 [INFO] aiogram.event: Update id=524975143 is handled. Duration 125 ms by bot id=8261433265
+2025-09-25 20:01:44,138 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_История 📚 История
+2025-09-25 20:01:45,879 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:01:46,013 [INFO] aiogram.event: Update id=524975144 is handled. Duration 1875 ms by bot id=8261433265
+2025-09-25 20:01:47,041 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_B Вариант B
+2025-09-25 20:01:47,098 [INFO] aiogram.event: Update id=524975145 is handled. Duration 62 ms by bot id=8261433265
+2025-09-25 20:01:55,440 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_История 📚 История
+2025-09-25 20:01:58,283 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:01:58,352 [INFO] aiogram.event: Update id=524975146 is handled. Duration 2905 ms by bot id=8261433265
+2025-09-25 20:02:01,271 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_B Вариант B
+2025-09-25 20:02:01,330 [INFO] aiogram.event: Update id=524975147 is handled. Duration 62 ms by bot id=8261433265
+2025-09-25 20:02:03,337 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_История 📚 История
+2025-09-25 20:02:04,973 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:02:05,066 [INFO] aiogram.event: Update id=524975148 is handled. Duration 1734 ms by bot id=8261433265
+2025-09-25 20:02:08,325 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:02:08,382 [INFO] aiogram.event: Update id=524975149 is handled. Duration 62 ms by bot id=8261433265
+2025-09-25 20:02:09,820 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_История 📚 История
+2025-09-25 20:02:12,139 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:02:12,273 [INFO] aiogram.event: Update id=524975150 is handled. Duration 2452 ms by bot id=8261433265
+2025-09-25 20:02:14,525 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:02:14,622 [INFO] aiogram.event: Update id=524975151 is handled. Duration 92 ms by bot id=8261433265
+2025-09-25 20:02:15,895 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_История 📚 История
+2025-09-25 20:02:17,919 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:02:18,042 [INFO] aiogram.event: Update id=524975152 is handled. Duration 2140 ms by bot id=8261433265
+2025-09-25 20:02:24,825 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_D Вариант D
+2025-09-25 20:02:24,898 [INFO] aiogram.event: Update id=524975153 is handled. Duration 77 ms by bot id=8261433265
+2025-09-25 20:02:26,861 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_open 📝 Квиз
+2025-09-25 20:02:26,943 [INFO] aiogram.event: Update id=524975154 is handled. Duration 79 ms by bot id=8261433265
+2025-09-25 20:02:27,976 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Наука 🔬 Наука
+2025-09-25 20:02:30,486 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:02:30,576 [INFO] aiogram.event: Update id=524975155 is handled. Duration 2594 ms by bot id=8261433265
+2025-09-25 20:02:31,974 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:02:32,058 [INFO] aiogram.event: Update id=524975156 is handled. Duration 78 ms by bot id=8261433265
+2025-09-25 20:02:33,948 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Наука 🔬 Наука
+2025-09-25 20:02:36,077 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:02:36,153 [INFO] aiogram.event: Update id=524975157 is handled. Duration 2202 ms by bot id=8261433265
+2025-09-25 20:02:38,260 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:02:38,353 [INFO] aiogram.event: Update id=524975158 is handled. Duration 93 ms by bot id=8261433265
+2025-09-25 20:02:39,868 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Наука 🔬 Наука
+2025-09-25 20:02:41,795 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:02:41,849 [INFO] aiogram.event: Update id=524975159 is handled. Duration 1984 ms by bot id=8261433265
+2025-09-25 20:02:43,412 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_C Вариант C
+2025-09-25 20:02:43,493 [INFO] aiogram.event: Update id=524975160 is handled. Duration 77 ms by bot id=8261433265
+2025-09-25 20:02:44,691 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Наука 🔬 Наука
+2025-09-25 20:02:47,566 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:02:47,647 [INFO] aiogram.event: Update id=524975161 is handled. Duration 2952 ms by bot id=8261433265
+2025-09-25 20:02:48,935 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_D Вариант D
+2025-09-25 20:02:49,029 [INFO] aiogram.event: Update id=524975162 is handled. Duration 93 ms by bot id=8261433265
+2025-09-25 20:02:50,344 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Наука 🔬 Наука
+2025-09-25 20:02:52,926 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:02:53,040 [INFO] aiogram.event: Update id=524975163 is handled. Duration 2687 ms by bot id=8261433265
+2025-09-25 20:02:54,944 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_C Вариант C
+2025-09-25 20:02:55,131 [INFO] aiogram.event: Update id=524975164 is handled. Duration 187 ms by bot id=8261433265
+2025-09-25 20:02:57,185 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Наука 🔬 Наука
+2025-09-25 20:02:59,693 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:02:59,756 [INFO] aiogram.event: Update id=524975165 is handled. Duration 2577 ms by bot id=8261433265
+2025-09-25 20:03:06,147 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Спорт 🏟 Спорт
+2025-09-25 20:03:08,493 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:03:08,554 [INFO] aiogram.event: Update id=524975166 is handled. Duration 2406 ms by bot id=8261433265
+2025-09-25 20:03:15,070 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | msg: 🏠 Меню
+2025-09-25 20:03:15,201 [INFO] aiogram.event: Update id=524975167 is handled. Duration 125 ms by bot id=8261433265
+2025-09-25 20:03:17,067 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_open 📝 Квиз
+2025-09-25 20:03:17,184 [INFO] aiogram.event: Update id=524975168 is handled. Duration 109 ms by bot id=8261433265
+2025-09-25 20:03:18,894 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_Спорт 🏟 Спорт
+2025-09-25 20:03:20,816 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:03:20,894 [INFO] aiogram.event: Update id=524975169 is handled. Duration 2000 ms by bot id=8261433265
+2025-09-25 20:03:23,753 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:03:23,900 [INFO] aiogram.event: Update id=524975170 is handled. Duration 140 ms by bot id=8261433265
+2025-09-25 20:03:25,246 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Спорт 🏟 Спорт
+2025-09-25 20:03:27,744 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:03:27,849 [INFO] aiogram.event: Update id=524975171 is handled. Duration 2609 ms by bot id=8261433265
+2025-09-25 20:03:30,866 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:03:30,923 [INFO] aiogram.event: Update id=524975172 is handled. Duration 63 ms by bot id=8261433265
+2025-09-25 20:03:32,272 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Спорт 🏟 Спорт
+2025-09-25 20:03:34,030 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:03:34,129 [INFO] aiogram.event: Update id=524975173 is handled. Duration 1859 ms by bot id=8261433265
+2025-09-25 20:03:36,164 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:03:36,225 [INFO] aiogram.event: Update id=524975174 is handled. Duration 62 ms by bot id=8261433265
+2025-09-25 20:03:40,398 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Спорт 🏟 Спорт
+2025-09-25 20:03:43,027 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:03:43,125 [INFO] aiogram.event: Update id=524975175 is handled. Duration 2734 ms by bot id=8261433265
+2025-09-25 20:03:50,539 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | msg: 🏠 Меню
+2025-09-25 20:03:50,598 [INFO] aiogram.event: Update id=524975176 is handled. Duration 62 ms by bot id=8261433265
+2025-09-25 20:03:54,880 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: fact_random 🔄 Ещё факт
+2025-09-25 20:03:57,520 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:03:57,626 [INFO] aiogram.event: Update id=524975177 is handled. Duration 2750 ms by bot id=8261433265
+2025-09-25 20:05:53,780 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: gpt_open 💬 GPT
+2025-09-25 20:05:53,987 [INFO] aiogram.event: Update id=524975178 is handled. Duration 217 ms by bot id=8261433265
+2025-09-25 20:05:59,231 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=GptState:waiting | cb: talk_open
+2025-09-25 20:05:59,291 [INFO] aiogram.event: Update id=524975179 is handled. Duration 62 ms by bot id=8261433265
+2025-09-25 20:06:00,124 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=GptState:waiting | cb: talk_set_jobs 🍏 Стив Джобс
+2025-09-25 20:06:00,249 [INFO] aiogram.event: Update id=524975180 is handled. Duration 125 ms by bot id=8261433265
+2025-09-25 20:06:02,932 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=PersonaState:chatting | cb: start 🏠 В меню
+2025-09-25 20:06:03,019 [INFO] aiogram.event: Update id=524975181 is handled. Duration 93 ms by bot id=8261433265
+2025-09-25 20:06:06,939 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: tr_open 🌐 Переводчик
+2025-09-25 20:06:07,110 [INFO] aiogram.event: Update id=524975182 is handled. Duration 186 ms by bot id=8261433265
+2025-09-25 20:06:08,218 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: start 🏠 В меню
+2025-09-25 20:06:08,309 [INFO] aiogram.event: Update id=524975183 is handled. Duration 94 ms by bot id=8261433265
+2025-09-25 20:15:31,807 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 20:15:32,065 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 20:15:43,682 [INFO] bot: 🚀 Bot starting...
+2025-09-25 20:15:43,683 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 20:15:43,796 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 20:15:49,009 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 20:15:49,155 [INFO] aiogram.event: Update id=524975184 is handled. Duration 140 ms by bot id=8261433265
+2025-09-25 20:15:50,313 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_open 📝 Квиз
+2025-09-25 20:15:50,403 [INFO] aiogram.event: Update id=524975185 is handled. Duration 77 ms by bot id=8261433265
+2025-09-25 20:15:51,514 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_История 📚 История
+2025-09-25 20:15:54,536 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:15:54,815 [INFO] aiogram.event: Update id=524975186 is handled. Duration 3312 ms by bot id=8261433265
+2025-09-25 20:15:58,181 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_C Вариант C
+2025-09-25 20:15:58,242 [INFO] aiogram.event: Update id=524975187 is handled. Duration 61 ms by bot id=8261433265
+2025-09-25 20:16:00,555 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_История 📚 История
+2025-09-25 20:16:02,625 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:16:02,709 [INFO] aiogram.event: Update id=524975188 is handled. Duration 2155 ms by bot id=8261433265
+2025-09-25 20:16:05,812 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:16:05,875 [INFO] aiogram.event: Update id=524975189 is handled. Duration 77 ms by bot id=8261433265
+2025-09-25 20:16:10,113 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_История 📚 История
+2025-09-25 20:16:12,034 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:16:12,143 [INFO] aiogram.event: Update id=524975190 is handled. Duration 2032 ms by bot id=8261433265
+2025-09-25 20:16:22,619 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:16:22,779 [INFO] aiogram.event: Update id=524975191 is handled. Duration 157 ms by bot id=8261433265
+2025-09-25 20:26:04,419 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 20:26:04,677 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 20:26:11,229 [INFO] bot: 🚀 Bot starting...
+2025-09-25 20:26:11,229 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 20:26:11,345 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 20:26:16,005 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 20:26:16,162 [INFO] aiogram.event: Update id=524975192 is handled. Duration 155 ms by bot id=8261433265
+2025-09-25 20:26:17,624 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_open 📝 Квиз
+2025-09-25 20:26:17,790 [INFO] aiogram.event: Update id=524975193 is handled. Duration 172 ms by bot id=8261433265
+2025-09-25 20:26:19,317 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_История 📚 История
+2025-09-25 20:26:19,318 [INFO] aiogram.event: Update id=524975194 is not handled. Duration 0 ms by bot id=8261433265
+2025-09-25 20:26:19,318 [ERROR] aiogram.event: Cause exception while process update id=524975194 by bot id=8261433265
+TypeError: ask_gpt() got an unexpected keyword argument 'temperature'
+Traceback (most recent call last):
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\core\dispatcher.py", line 55, in log_callbacks
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\handlers\quiz.py", line 88, in quiz_question
+    qdata = await _generate_mc_question(topic, asked)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\handlers\quiz.py", line 46, in _generate_mc_question
+    raw = await ask_gpt(prompt, temperature=1.2)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ask_gpt() got an unexpected keyword argument 'temperature'
+2025-09-25 20:26:23,758 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_Наука 🔬 Наука
+2025-09-25 20:26:23,760 [INFO] aiogram.event: Update id=524975195 is not handled. Duration 0 ms by bot id=8261433265
+2025-09-25 20:26:23,760 [ERROR] aiogram.event: Cause exception while process update id=524975195 by bot id=8261433265
+TypeError: ask_gpt() got an unexpected keyword argument 'temperature'
+Traceback (most recent call last):
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\core\dispatcher.py", line 55, in log_callbacks
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\handlers\quiz.py", line 88, in quiz_question
+    qdata = await _generate_mc_question(topic, asked)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\handlers\quiz.py", line 46, in _generate_mc_question
+    raw = await ask_gpt(prompt, temperature=1.2)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ask_gpt() got an unexpected keyword argument 'temperature'
+2025-09-25 20:26:53,670 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 20:26:53,865 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 1] [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2706)
+2025-09-25 20:26:53,865 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8261433265)
+2025-09-25 20:26:53,937 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 20:30:38,526 [INFO] bot: 🚀 Bot starting...
+2025-09-25 20:30:38,526 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 20:30:38,667 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 20:30:42,649 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 20:30:42,793 [INFO] aiogram.event: Update id=524975196 is handled. Duration 140 ms by bot id=8261433265
+2025-09-25 20:30:50,282 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_open 📝 Квиз
+2025-09-25 20:30:50,349 [INFO] aiogram.event: Update id=524975197 is handled. Duration 62 ms by bot id=8261433265
+2025-09-25 20:30:52,996 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_История 📚 История
+2025-09-25 20:30:52,998 [INFO] aiogram.event: Update id=524975198 is not handled. Duration 0 ms by bot id=8261433265
+2025-09-25 20:30:52,998 [ERROR] aiogram.event: Cause exception while process update id=524975198 by bot id=8261433265
+TypeError: ask_gpt() got an unexpected keyword argument 'temperature'
+Traceback (most recent call last):
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\core\dispatcher.py", line 55, in log_callbacks
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\handlers\quiz.py", line 88, in quiz_question
+    qdata = await _generate_mc_question(topic, asked)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pjotr\Documents\Coding\JR_tgproject\handlers\quiz.py", line 46, in _generate_mc_question
+    raw = await ask_gpt(prompt, temperature=1.2)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ask_gpt() got an unexpected keyword argument 'temperature'
+2025-09-25 20:36:09,238 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 20:36:09,489 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 20:36:58,425 [INFO] bot: 🚀 Bot starting...
+2025-09-25 20:36:58,425 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 20:36:58,558 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 20:36:59,667 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 20:36:59,818 [INFO] aiogram.event: Update id=524975199 is handled. Duration 157 ms by bot id=8261433265
+2025-09-25 20:37:01,529 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_open 📝 Квиз
+2025-09-25 20:37:01,638 [INFO] aiogram.event: Update id=524975200 is handled. Duration 109 ms by bot id=8261433265
+2025-09-25 20:37:02,796 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: quiz_topic_История 📚 История
+2025-09-25 20:37:05,686 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:37:05,783 [INFO] aiogram.event: Update id=524975201 is handled. Duration 3000 ms by bot id=8261433265
+2025-09-25 20:37:08,629 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:37:08,695 [INFO] aiogram.event: Update id=524975202 is handled. Duration 62 ms by bot id=8261433265
+2025-09-25 20:37:15,810 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_История 📚 История
+2025-09-25 20:37:19,187 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:37:19,249 [INFO] aiogram.event: Update id=524975203 is handled. Duration 3436 ms by bot id=8261433265
+2025-09-25 20:37:25,084 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:37:25,233 [INFO] aiogram.event: Update id=524975204 is handled. Duration 140 ms by bot id=8261433265
+2025-09-25 20:37:28,048 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_open 📝 Квиз
+2025-09-25 20:37:28,121 [INFO] aiogram.event: Update id=524975205 is handled. Duration 61 ms by bot id=8261433265
+2025-09-25 20:37:28,863 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Наука 🔬 Наука
+2025-09-25 20:37:31,080 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:37:31,173 [INFO] aiogram.event: Update id=524975206 is handled. Duration 2313 ms by bot id=8261433265
+2025-09-25 20:37:39,178 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_B Вариант B
+2025-09-25 20:37:39,241 [INFO] aiogram.event: Update id=524975207 is handled. Duration 61 ms by bot id=8261433265
+2025-09-25 20:37:42,384 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_topic_Наука 🔬 Наука
+2025-09-25 20:38:03,484 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:38:03,636 [INFO] aiogram.event: Update id=524975208 is handled. Duration 21250 ms by bot id=8261433265
+2025-09-25 20:38:07,958 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | cb: quiz_ans_A Вариант A
+2025-09-25 20:38:08,025 [INFO] aiogram.event: Update id=524975209 is handled. Duration 62 ms by bot id=8261433265
+2025-09-25 20:38:10,742 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=QuizState:waiting_choice | msg: 🏠 Меню
+2025-09-25 20:38:10,829 [INFO] aiogram.event: Update id=524975210 is handled. Duration 94 ms by bot id=8261433265
+2025-09-25 20:38:14,865 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: tr_open 🌐 Переводчик
+2025-09-25 20:38:14,921 [INFO] aiogram.event: Update id=524975211 is handled. Duration 47 ms by bot id=8261433265
+2025-09-25 20:38:16,423 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 20:38:16,557 [INFO] aiogram.event: Update id=524975212 is handled. Duration 125 ms by bot id=8261433265
+2025-09-25 20:38:17,400 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: recs_open 🎬 Рекомендации
+2025-09-25 20:38:17,472 [INFO] aiogram.event: Update id=524975213 is handled. Duration 77 ms by bot id=8261433265
+2025-09-25 20:38:21,285 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: recs_cat_книги 📚 Книги
+2025-09-25 20:38:21,397 [INFO] aiogram.event: Update id=524975214 is handled. Duration 109 ms by bot id=8261433265
+2025-09-25 20:38:29,735 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=RecsState:waiting_genre | msg: фантастика
+2025-09-25 20:38:40,865 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:38:41,023 [INFO] aiogram.event: Update id=524975215 is handled. Duration 11282 ms by bot id=8261433265

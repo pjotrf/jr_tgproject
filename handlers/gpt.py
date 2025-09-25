@@ -19,5 +19,5 @@ async def gpt_open(call: CallbackQuery, state: FSMContext):
 
 @router.message(GptState.waiting)
 async def gpt_answer(msg: Message, state: FSMContext):
-    ans = await ask_gpt(msg.text)
+    ans = await ask_gpt(msg.text, temperature=0.7)
     await msg.answer(f"🤖 {ans}", reply_markup=inline_main_menu())

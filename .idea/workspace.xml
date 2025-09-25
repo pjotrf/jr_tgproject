@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3d5ae82-9d9d-4626-89c0-8eaedad0dd23" name="Changes" comment="Исправлен readme" />
+    <list default="true" id="d3d5ae82-9d9d-4626-89c0-8eaedad0dd23" name="Changes" comment="Исправлен readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.log" beforeDir="false" afterPath="$PROJECT_DIR$/bot.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/gpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/gpt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/quiz.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/quiz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/random_fact.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/random_fact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/recs.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/recs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/talk.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/talk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/translator.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/translator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/inline/quiz.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/inline/quiz.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758813635628</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Исправлен readme">
+      <option name="closed" value="true" />
+      <created>1758813677436</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1758813677436</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
