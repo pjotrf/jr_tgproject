@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3d5ae82-9d9d-4626-89c0-8eaedad0dd23" name="Changes" comment="Добавлен Welcome Message">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot.log" beforeDir="false" afterPath="$PROJECT_DIR$/bot.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/dispatcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/dispatcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/gpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/gpt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/quiz.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/quiz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/random_fact.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/random_fact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/recs.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/recs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/talk.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/talk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/translator.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/translator.py" afterDir="false" />
-    </list>
+    <list default="true" id="d3d5ae82-9d9d-4626-89c0-8eaedad0dd23" name="Changes" comment="Исправлен readme" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,14 +140,32 @@
       <option name="project" value="LOCAL" />
       <updated>1758802931337</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Исправлена архитектура, клавиатуры">
+      <option name="closed" value="true" />
+      <created>1758813457737</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1758813457737</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Исправлен readme">
+      <option name="closed" value="true" />
+      <created>1758813635628</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758813635628</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Добавлено логирование, изменены кнопки" />
     <MESSAGE value="Добавлен Welcome Message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен Welcome Message" />
+    <MESSAGE value="Исправлена архитектура, клавиатуры" />
+    <MESSAGE value="Исправлен readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлен readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
