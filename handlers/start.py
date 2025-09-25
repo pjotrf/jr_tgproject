@@ -22,25 +22,38 @@ def inline_main_menu() -> InlineKeyboardMarkup:
         ],
     ])
 
+
 def reply_menu() -> ReplyKeyboardMarkup:
     return ReplyKeyboardMarkup(
         keyboard=[[KeyboardButton(text="🏠 Меню")]],
         resize_keyboard=True
     )
 
+WELCOME_TEXT = (
+    "👋 Привет! Я твой помощник ChatGPT 🤖\n\n"
+    "Вот что я умею:\n"
+    "• 🎲 Случайный факт — пришлю картинку и любопытное знание\n"
+    "• 💬 GPT — задай любой вопрос ИИ\n"
+    "• 🧑‍🎓 Личность — общение в стиле Эйнштейна, Пушкина или Джобса\n"
+    "• 📝 Квиз — викторина с вариантами ответов\n"
+    "• 🌐 Переводчик — переведу текст на разные языки\n"
+    "• 🎬 Рекомендации — подскажу фильмы, книги и музыку\n\n"
+    "Выбери режим ниже ⬇️"
+)
+
 @router.message(Command("start"))
 async def start_cmd(msg: Message, state: FSMContext):
     await state.clear()
-    await msg.answer("👋 Привет! Я твой помощник ChatGPT 🤖", reply_markup=reply_menu())
-    await msg.answer("Выбери режим ниже ⬇️", reply_markup=inline_main_menu())
+    await msg.answer(WELCOME_TEXT, reply_markup=reply_menu())
+    await msg.answer("📌 Главное меню:", reply_markup=inline_main_menu())
 
 @router.callback_query(F.data == "start")
 async def start_cb(call: CallbackQuery, state: FSMContext):
     await state.clear()
     if call.message:
-        await call.message.edit_text("🏠 Главное меню. Выбери режим ⬇️", reply_markup=inline_main_menu())
+        await call.message.edit_text(WELCOME_TEXT, reply_markup=inline_main_menu())
 
 @router.message(F.text == "🏠 Меню")
 async def reply_menu_btn(msg: Message, state: FSMContext):
     await state.clear()
-    await msg.answer("🏠 Главное меню. Выбери режим ⬇️", reply_markup=inline_main_menu())
+    await msg.answer(WELCOME_TEXT, reply_markup=inline_main_menu())

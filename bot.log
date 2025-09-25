@@ -89,3 +89,69 @@
 2025-09-25 14:58:41,485 [INFO] bot: 📨 unknown | state=GptState:waiting | event: Update
 2025-09-25 14:58:41,486 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=GptState:waiting | cb: start 🏠 В меню
 2025-09-25 14:58:41,564 [INFO] aiogram.event: Update id=524975015 is handled. Duration 79 ms by bot id=8261433265
+2025-09-25 15:03:26,694 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 15:03:26,694 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8261433265)
+2025-09-25 15:03:31,803 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 15:03:31,803 [WARNING] aiogram.dispatcher: Sleep for 1.275116 seconds and try again... (tryings = 1, bot id = 8261433265)
+2025-09-25 15:03:37,499 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 15:03:37,500 [WARNING] aiogram.dispatcher: Sleep for 1.671349 seconds and try again... (tryings = 2, bot id = 8261433265)
+2025-09-25 15:03:43,999 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 15:03:43,999 [WARNING] aiogram.dispatcher: Sleep for 2.005857 seconds and try again... (tryings = 3, bot id = 8261433265)
+2025-09-25 15:03:51,348 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 15:03:51,348 [WARNING] aiogram.dispatcher: Sleep for 2.552193 seconds and try again... (tryings = 4, bot id = 8261433265)
+2025-09-25 15:03:58,554 [INFO] aiogram.dispatcher: Connection established (tryings = 5, bot id = 8261433265)
+2025-09-25 15:03:58,555 [INFO] bot: 📨 unknown | state=None | event: Update
+2025-09-25 15:03:58,555 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 15:03:58,684 [INFO] aiogram.event: Update id=524975016 is handled. Duration 125 ms by bot id=8261433265
+2025-09-25 15:04:00,121 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 15:04:00,122 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8261433265)
+2025-09-25 15:04:08,273 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 15:04:08,273 [WARNING] aiogram.dispatcher: Sleep for 1.226694 seconds and try again... (tryings = 1, bot id = 8261433265)
+2025-09-25 15:04:14,380 [INFO] aiogram.dispatcher: Connection established (tryings = 2, bot id = 8261433265)
+2025-09-25 15:04:14,381 [INFO] bot: 📨 unknown | state=None | event: Update
+2025-09-25 15:04:14,381 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: talk_open
+2025-09-25 15:04:14,495 [INFO] aiogram.event: Update id=524975017 is handled. Duration 108 ms by bot id=8261433265
+2025-09-25 15:04:17,564 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 15:04:17,564 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8261433265)
+2025-09-25 15:04:25,985 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 15:04:26,241 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 15:07:40,199 [INFO] bot: 🚀 Bot starting...
+2025-09-25 15:07:40,199 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 15:07:40,314 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 15:07:43,306 [INFO] bot: 📨 unknown | state=None | event: Update
+2025-09-25 15:07:43,306 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 15:07:43,307 [INFO] aiogram.event: Update id=524975022 is not handled. Duration 0 ms by bot id=8261433265
+2025-09-25 15:07:55,345 [INFO] bot: 📨 unknown | state=None | event: Update
+2025-09-25 15:07:55,345 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: talk_open
+2025-09-25 15:07:55,472 [INFO] aiogram.event: Update id=524975023 is handled. Duration 125 ms by bot id=8261433265
+2025-09-25 15:07:59,791 [INFO] bot: 📨 unknown | state=None | event: Update
+2025-09-25 15:07:59,791 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 15:07:59,793 [INFO] aiogram.event: Update id=524975024 is not handled. Duration 0 ms by bot id=8261433265
+2025-09-25 15:08:12,044 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 15:08:12,301 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 15:09:06,380 [INFO] bot: 🚀 Bot starting...
+2025-09-25 15:09:06,392 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 15:09:06,502 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 15:09:06,897 [INFO] bot: 📨 unknown | state=None | event: Update
+2025-09-25 15:09:06,897 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 15:09:07,088 [INFO] aiogram.event: Update id=524975025 is handled. Duration 187 ms by bot id=8261433265
+2025-09-25 15:09:25,310 [INFO] bot: 📨 unknown | state=None | event: Update
+2025-09-25 15:09:25,310 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: /start
+2025-09-25 15:09:25,524 [INFO] aiogram.event: Update id=524975026 is handled. Duration 218 ms by bot id=8261433265
+2025-09-25 15:11:07,300 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 15:11:07,566 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 15:11:11,749 [INFO] bot: 🚀 Bot starting...
+2025-09-25 15:11:11,749 [INFO] aiogram.dispatcher: Start polling
+2025-09-25 15:11:11,870 [INFO] aiogram.dispatcher: Run polling for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
+2025-09-25 15:11:17,523 [INFO] bot: 📨 unknown | state=None | event: Update
+2025-09-25 15:11:17,523 [INFO] bot: 📩 239110197 (Pjotr @PetroPetroF) | state=None | msg: 🏠 Меню
+2025-09-25 15:11:17,654 [INFO] aiogram.event: Update id=524975027 is handled. Duration 125 ms by bot id=8261433265
+2025-09-25 15:11:37,093 [INFO] bot: 📨 unknown | state=None | event: Update
+2025-09-25 15:11:37,095 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: fact_random 🔄 Ещё факт
+2025-09-25 15:11:38,838 [INFO] httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 15:11:39,119 [INFO] aiogram.event: Update id=524975028 is handled. Duration 2030 ms by bot id=8261433265
+2025-09-25 15:11:44,109 [INFO] bot: 📨 unknown | state=None | event: Update
+2025-09-25 15:11:44,109 [INFO] bot: 🖲 239110197 (Pjotr @PetroPetroF) | state=None | cb: start 🏠 В меню
+2025-09-25 15:11:44,169 [INFO] aiogram.event: Update id=524975029 is handled. Duration 47 ms by bot id=8261433265
+2025-09-25 15:12:19,307 [INFO] aiogram.dispatcher: Polling stopped
+2025-09-25 15:12:19,558 [INFO] aiogram.dispatcher: Polling stopped for bot @jr_ads_test_bot id=8261433265 - 'JavaRush homework bot'
